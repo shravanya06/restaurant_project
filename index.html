@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savory Bites | Restaurant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-black text-white p-6 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">Savory Bites</h1>
+      <nav class="space-x-6">
+        <a href="#menu" class="hover:text-yellow-400">Menu</a>
+        <a href="#gallery" class="hover:text-yellow-400">Gallery</a>
+        <a href="#reservation" class="hover:text-yellow-400">Reserve</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="text-center py-16 bg-yellow-50">
+      <h2 class="text-4xl font-bold mb-4">Welcome to Savory Bites</h2>
+      <p class="text-lg text-gray-600">
+        An exquisite blend of tradition and taste
+      </p>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="py-12 px-4 bg-white">
+      <h3 class="text-3xl font-bold text-center mb-8">Menu</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div
+          class="rounded-2xl overflow-hidden shadow hover:shadow-xl transition"
+        >
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-W8Ni2beblULp68bZnVs_0II_UD-qSbxc9A&s"
+            alt="Spicy Ramen"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h4 class="text-xl font-semibold">Spicy Ramen</h4>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl overflow-hidden shadow hover:shadow-xl transition"
+        >
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/045/607/060/large_2x/assorted-sushi-platter-on-modern-plate-photo.jpg"
+            alt="Sushi Platter"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h4 class="text-xl font-semibold">Sushi Platter</h4>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl overflow-hidden shadow hover:shadow-xl transition"
+        >
+          <img
+            src="https://iowagirleats.com/wp-content/uploads/2024/09/Perfect-Grilled-Steak-with-Herb-Butter-iowagirleats-Featured-1200x2-1.jpg"
+            alt="Grilled Steak"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h4 class="text-xl font-semibold">Grilled Steak</h4>
+          </div>
+        </div>
+        <div
+          class="rounded-2xl overflow-hidden shadow hover:shadow-xl transition"
+        >
+          <img
+            src="https://i.ytimg.com/vi/BJd2UfchnO4/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAY6H4tdTYbMLlDk387zlazSZwSBA"
+            alt="Pasta Delight"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h4 class="text-xl font-semibold">Pasta Delight</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-12 bg-gray-100 px-4">
+      <h3 class="text-3xl font-bold text-center mb-8">Gallery</h3>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <img
+          src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg"
+          alt="Gallery 1"
+          class="w-full h-48 object-cover rounded-2xl hover:scale-105 transition"
+        />
+        <img
+          src="https://ca-times.brightspotcdn.com/dims4/default/5620411/2147483647/strip/true/crop/5840x3285+0+224/resize/1200x675!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F4a%2Fa3%2Fcbdcc710438da2d41c686114ef8d%2F1495496-wk-the-gallery-restaurant-wjs004.jpg"
+          alt="Gallery 2"
+          class="w-full h-48 object-cover rounded-2xl hover:scale-105 transition"
+        />
+        <img
+          src="https://b.zmtcdn.com/data/pictures/4/19982534/9d345b6ae3533002a9590952d655e8f6_featured_v2.jpg"
+          alt="Gallery 3"
+          class="w-full h-48 object-cover rounded-2xl hover:scale-105 transition"
+        />
+        <img
+          src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/restaurant/649825/restaurant020190807103931.jpg"
+          alt="Gallery 4"
+          class="w-full h-48 object-cover rounded-2xl hover:scale-105 transition"
+        />
+      </div>
+    </section>
+
+    <!-- Reservation Form -->
+    <section id="reservation" class="py-12 px-4 bg-white">
+      <h3 class="text-3xl font-bold text-center mb-8">Reserve a Table</h3>
+      <form onsubmit="handleSubmit(event)" class="max-w-xl mx-auto space-y-4">
+        <input
+          name="name"
+          placeholder="Your Name"
+          class="w-full border border-gray-300 rounded p-2"
+          required
+        />
+        <input
+          name="email"
+          type="email"
+          placeholder="Your Email"
+          class="w-full border border-gray-300 rounded p-2"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Date, Time & Special Requests"
+          class="w-full border border-gray-300 rounded p-2"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-black text-white py-2 px-4 rounded w-full hover:bg-yellow-500 hover:text-black transition"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 bg-black text-white">
+      &copy; 2025 Savory Bites. All Rights Reserved.
+    </footer>
+
+    <!-- Simple Alert Script -->
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+        alert(\"Thank you! Your reservation has been submitted.\");
+        event.target.reset();
+      }
+    </script>
+  </body>
+</html>
